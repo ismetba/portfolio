@@ -34,7 +34,7 @@ ul > li:hover {
   box-shadow: 0px 4px 4px 0px #dcdcdc;
   min-height: 200px;
 }
-.container .row .card:nth-child(1) {
+.container .row div:nth-child(1) .card {
   color: var(--secondary);
   background: linear-gradient(
       0deg,
@@ -43,7 +43,7 @@ ul > li:hover {
     ),
     url(../Assets/webDesign.jpg) lightgray 50% / cover no-repeat;
 }
-.container .row .card:nth-child(2) {
+.container .row div:nth-child(2) .card {
   color: var(--secondary);
   background: linear-gradient(
       0deg,
@@ -52,7 +52,7 @@ ul > li:hover {
     ),
     url(../Assets/frontend.jpg) lightgray 50% / cover no-repeat;
 }
-.container .row .card:nth-child(3) {
+.container .row div:nth-child(3) .card {
   color: var(--secondary);
   background: linear-gradient(
       0deg,
