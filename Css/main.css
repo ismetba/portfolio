@@ -17,6 +17,33 @@ body {
   display: flex;
   flex-direction: column;
 }
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 16px 0px;
+}
+ul > a > li {
+  margin-right: auto;
+  color: var(--primary);
+  font-weight: bold;
+  padding: 16px 32px;
+}
+ul > a > li.active {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-radius: 10px;
+}
+ul > a > li.active:hover {
+  background-color: var(--primaryhover);
+  color: var(--secondary);
+}
+ul > a > li:hover {
+  color: var(--primaryhover);
+  font-weight: bold;
+  cursor: pointer;
+}
 h6 {
   font-weight: 600;
   font-size: 21.33px;
@@ -107,10 +134,32 @@ small {
   background-color: var(--primaryhover);
   box-shadow: 0px 0px 10px 0px var(--primaryhover);
 }
-svg[height="40"]:hover {
+svg[height="30"]:hover {
   fill: green;
   cursor: pointer;
 }
 footer {
   margin-top: auto;
+}
+.mobile-menu-container {
+  position: absolute;
+}
+.mobile-menu-container ul {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.mobile-menu-container ul svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#menu-btn {
+  cursor: pointer;
+}
+#menu-close-btn {
+  cursor: pointer;
 }
