@@ -8,10 +8,11 @@
   </head>
   <header class="d-flex justify-content-end">
     <img
-      class="d-lg-none"
+      id="menu-btn"
+      class="d-lg-none mt-3 me-3"
       width="36px"
       height="36px"
-      src="Assets/menu-svgrepo-com 1.svg"
+      src="../Assets/menu-svgrepo-com 1.svg"
       alt=""
       srcset=""
     />
@@ -23,6 +24,40 @@
     </ul>
   </header>
   <body>
+    <div class="container mobile-menu-container">
+      <div class="row">
+        <div class="col justify-content-end d-flex">
+          <ul class="mobile-menu d-none">
+            <svg
+              id="menu-close-btn"
+              class="mt-2 me-2"
+              xmlns="http://www.w3.org/2000/svg"
+              width="36px"
+              height="36px"
+              fill="currentColor"
+              class="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+              />
+            </svg>
+            <a class="mt-4" href="../index.html">
+              <li>Home</li>
+            </a>
+            <a href="./experience.html">
+              <li>Experience</li>
+            </a>
+            <a href="./contact.html">
+              <li>Contact</li>
+            </a>
+            <a href="#">
+              <li>About</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="container mt-48">
       <div class="row d-flex flex-column-reverse flex-xl-row">
         <div class="col-12 col-xl-6">
@@ -114,5 +149,6 @@
         Designed By ismetba
       </div>
     </div>
+    <script src="../Js/main.js"></script>
   </footer>
 </html>

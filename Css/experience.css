@@ -1,0 +1,11 @@
+@import url(main.css);
+.card {
+  background-color: var(--secondary);
+  display: flex;
+  padding: 16px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px #dcdcdc;
+  min-height: 250px;
+}
