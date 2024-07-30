@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       try {
-          const response = await fetch('localhost:3000/send-email', {
+          const response = await fetch('https://ismetbayandur.com.tr:3000/send-email', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
