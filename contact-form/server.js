@@ -29,7 +29,7 @@ app.post('/send-email', (req, res) => {
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error(error);
-            return res.status(500).send('Mesaj gönderilirken bir hata oluştu.');
+            return res.status(500).send('Mesaj gönderilirken bir hata oluştu. server');
         }
         res.send('Mesajınız başarıyla gönderildi!');
     });
