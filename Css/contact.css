@@ -1,0 +1,11 @@
+@import url(main.css);
+input , textarea {
+  border-radius: 10px;
+  border: 1px solid #000;
+  height: 32px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+textarea{
+    height: 256px;
+}
