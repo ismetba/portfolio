@@ -21,7 +21,7 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: 'ismetbayandur@ismetbayandur.com.tr',
+        to: 'ismet@ismetbayandur.com.tr',
         subject: `İletişim Formu: ${name}`,
         text: message
     };
