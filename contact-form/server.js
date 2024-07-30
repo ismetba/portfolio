@@ -1,40 +1,44 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const port = 3000;
 
+// CORS ve body-parser middleware'lerini ekleyin
 app.use(cors());
-
-app.use(bodyParser.json());
+app.use(express.json()); // JSON verilerini işlemek için
+app.use(express.urlencoded({ extended: true })); // URL encoded verileri işlemek için
 
 app.post('/send-email', (req, res) => {
-    const { name, email, message } = req.body;
+    console.log(req.body); // req.body'yi kontrol edin
+
+    const { name, mail, message } = req.body;
+    const email = "ismet@ismetbayandur.com.tr"
+    if (!name || !mail || !message) {
+        return res.status(400).send(`${name},${mail},${message}`);
+    }
 
     const transporter = nodemailer.createTransport({
-        host: 'ismetbayandur.com.tr',
+        host: 'ismetbayandur.com.tr', // Kendi SMTP sunucunuzun adresini kullanın
         port: 587,
-        secure: false, // true for 465, false for other ports
+        secure: false,
         auth: {
-            user: 'ismet@ismetbayandur.com.tr', // YunoHost e-posta adresiniz
-            pass: "xL9)SN.!5V>6e'!" // YunoHost e-posta şifreniz
+            user: 'ismet@ismetbayandur.com.tr', // SMTP kullanıcınız
+            pass: "xL9)SN.!5V>6e'!" // SMTP şifreniz
         }
     });
 
     const mailOptions = {
         from: email,
-        to: 'ismet@ismetbayandur.com.tr',
-        subject: `İletişim Formu: ${name}`,
-        text: message
+        to: 'info@ismetbayandur.com.tr', // E-postaları alacağınız adres
+        subject: "website iletişim",
+        text: `Isim : ${name}\nEmail : ${mail}\nMessage : ${message}`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error(error);
-            console.log(error);
-            console.log(info);
-            return res.status(500).send('Mesaj gönderilirken bir hata oluştu. server');
+            return res.status(500).send('Mesaj gönderilirken bir hata oluştu.');
         }
         res.send('Mesajınız başarıyla gönderildi!');
     });
