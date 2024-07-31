@@ -32,7 +32,7 @@ app.post('/send-email', (req, res) => {
         from: email,
         to: 'info@ismetbayandur.com.tr', // E-postaları alacağınız adres
         subject: "website iletişim",
-        text: `Isim : ${name}\nEmail : ${mail}\nMessage : ${message}`
+        text: `Isim : ${name}\nEmail : ${mail}\nMessage : ${message}\n\n\nismetbayandur.com.tr`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
