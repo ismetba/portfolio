@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       try {
-          const response = await fetch('http://localhost:3000/send-email', {
+          const response = await fetch('http://188.132.198.114:3000/send-email', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
