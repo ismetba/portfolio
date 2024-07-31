@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(form);
       const data = {
           name: formData.get('name'),
-          email: formData.get('email'),
+          mail: formData.get('mail'),
           message: formData.get('message'),
       };
 
       try {
-          const response = await fetch('188.132.198.114:3000/send-email', {
+          const response = await fetch('http://localhost:3000/send-email', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
