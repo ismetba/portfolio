@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
           const response = await fetch('http://188.132.198.114:3000/send-email', {
               method: 'POST',
-              mode: 'no-cors',
+              mode: 'cors',
               headers: {
                   'Content-Type': 'application/json'
               },

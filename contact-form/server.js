@@ -1,9 +1,11 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
 // CORS ve body-parser middleware'lerini ekleyin
+app.use(cors());
 app.use(express.json()); // JSON verilerini işlemek için
 app.use(express.urlencoded({ extended: true })); // URL encoded verileri işlemek için
 
