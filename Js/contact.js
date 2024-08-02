@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
               responseDiv.innerHTML = 'asd Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.';
           }
       } catch (error) {
+          console.log(error);
           responseDiv.innerHTML = 'Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin. contact.js';
       }
   });
